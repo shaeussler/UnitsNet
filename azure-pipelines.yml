@@ -13,6 +13,6 @@ steps:
 - task: PowerShell@2
   inputs:
     filePath: './Build/build.ps1'
-    arguments: 'skipUWP'
+    arguments: '-skipUWP'
 
 
