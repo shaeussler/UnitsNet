@@ -176,6 +176,9 @@ namespace UnitsNet
                 case IrradiationUnit irradiationUnit:
                     quantity = Irradiation.From(value, irradiationUnit);
                     return true;
+                case IrradiationDoseUnit irradiationDoseUnit:
+                    quantity = IrradiationDose.From(value, irradiationDoseUnit);
+                    return true;
                 case KinematicViscosityUnit kinematicViscosityUnit:
                     quantity = KinematicViscosity.From(value, kinematicViscosityUnit);
                     return true;
@@ -522,6 +525,9 @@ namespace UnitsNet
 
             if (quantityType == typeof(Irradiation))
                 return parser.TryParse<Irradiation, IrradiationUnit>(quantityString, formatProvider, Irradiation.From, out quantity);
+
+            if (quantityType == typeof(IrradiationDose))
+                return parser.TryParse<IrradiationDose, IrradiationDoseUnit>(quantityString, formatProvider, IrradiationDose.From, out quantity);
 
             if (quantityType == typeof(KinematicViscosity))
                 return parser.TryParse<KinematicViscosity, KinematicViscosityUnit>(quantityString, formatProvider, KinematicViscosity.From, out quantity);

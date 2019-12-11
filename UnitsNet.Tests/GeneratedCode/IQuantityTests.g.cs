@@ -79,6 +79,7 @@ namespace UnitsNet.Tests
             Assertion(3, InformationUnit.Terabyte, Quantity.From(3, InformationUnit.Terabyte));
             Assertion(3, IrradianceUnit.WattPerSquareMeter, Quantity.From(3, IrradianceUnit.WattPerSquareMeter));
             Assertion(3, IrradiationUnit.WattHourPerSquareMeter, Quantity.From(3, IrradiationUnit.WattHourPerSquareMeter));
+            Assertion(3, IrradiationDoseUnit.Milligray, Quantity.From(3, IrradiationDoseUnit.Milligray));
             Assertion(3, KinematicViscosityUnit.Stokes, Quantity.From(3, KinematicViscosityUnit.Stokes));
             Assertion(3, LapseRateUnit.DegreeCelsiusPerKilometer, Quantity.From(3, LapseRateUnit.DegreeCelsiusPerKilometer));
             Assertion(3, LengthUnit.Yard, Quantity.From(3, LengthUnit.Yard));
@@ -185,6 +186,7 @@ namespace UnitsNet.Tests
             Assertion(Information.Info, Information.Zero);
             Assertion(Irradiance.Info, Irradiance.Zero);
             Assertion(Irradiation.Info, Irradiation.Zero);
+            Assertion(IrradiationDose.Info, IrradiationDose.Zero);
             Assertion(KinematicViscosity.Info, KinematicViscosity.Zero);
             Assertion(LapseRate.Info, LapseRate.Zero);
             Assertion(Length.Info, Length.Zero);
@@ -291,6 +293,7 @@ namespace UnitsNet.Tests
             Assertion(Information.QuantityType, Information.Zero);
             Assertion(Irradiance.QuantityType, Irradiance.Zero);
             Assertion(Irradiation.QuantityType, Irradiation.Zero);
+            Assertion(IrradiationDose.QuantityType, IrradiationDose.Zero);
             Assertion(KinematicViscosity.QuantityType, KinematicViscosity.Zero);
             Assertion(LapseRate.QuantityType, LapseRate.Zero);
             Assertion(Length.QuantityType, Length.Zero);
@@ -397,6 +400,7 @@ namespace UnitsNet.Tests
             Assertion(Information.BaseDimensions, Information.Zero);
             Assertion(Irradiance.BaseDimensions, Irradiance.Zero);
             Assertion(Irradiation.BaseDimensions, Irradiation.Zero);
+            Assertion(IrradiationDose.BaseDimensions, IrradiationDose.Zero);
             Assertion(KinematicViscosity.BaseDimensions, KinematicViscosity.Zero);
             Assertion(LapseRate.BaseDimensions, LapseRate.Zero);
             Assertion(Length.BaseDimensions, Length.Zero);

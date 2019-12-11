@@ -130,6 +130,8 @@ namespace UnitsNet
                     return Irradiance.From(value, Irradiance.BaseUnit);
                 case QuantityType.Irradiation:
                     return Irradiation.From(value, Irradiation.BaseUnit);
+                case QuantityType.IrradiationDose:
+                    return IrradiationDose.From(value, IrradiationDose.BaseUnit);
                 case QuantityType.KinematicViscosity:
                     return KinematicViscosity.From(value, KinematicViscosity.BaseUnit);
                 case QuantityType.LapseRate:
@@ -388,6 +390,9 @@ namespace UnitsNet
                     return true;
                 case IrradiationUnit irradiationUnit:
                     quantity = Irradiation.From(value, irradiationUnit);
+                    return true;
+                case IrradiationDoseUnit irradiationDoseUnit:
+                    quantity = IrradiationDose.From(value, irradiationDoseUnit);
                     return true;
                 case KinematicViscosityUnit kinematicViscosityUnit:
                     quantity = KinematicViscosity.From(value, kinematicViscosityUnit);
@@ -668,6 +673,8 @@ namespace UnitsNet
                     return parser.TryParse<Irradiance, IrradianceUnit>(quantityString, formatProvider, Irradiance.From, out quantity);
                 case Type _ when quantityType == typeof(Irradiation):
                     return parser.TryParse<Irradiation, IrradiationUnit>(quantityString, formatProvider, Irradiation.From, out quantity);
+                case Type _ when quantityType == typeof(IrradiationDose):
+                    return parser.TryParse<IrradiationDose, IrradiationDoseUnit>(quantityString, formatProvider, IrradiationDose.From, out quantity);
                 case Type _ when quantityType == typeof(KinematicViscosity):
                     return parser.TryParse<KinematicViscosity, KinematicViscosityUnit>(quantityString, formatProvider, KinematicViscosity.From, out quantity);
                 case Type _ when quantityType == typeof(LapseRate):

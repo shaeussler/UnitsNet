@@ -76,6 +76,7 @@ namespace UnitsNet
         Information,
         Irradiance,
         Irradiation,
+        IrradiationDose,
         KinematicViscosity,
         LapseRate,
         Length,

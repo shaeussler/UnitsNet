@@ -779,6 +779,9 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<Irradiation>(IrradiationUnit.MillijoulePerSquareCentimeter, Irradiation.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Irradiation>(Irradiation.BaseUnit, IrradiationUnit.WattHourPerSquareMeter, q => q.ToUnit(IrradiationUnit.WattHourPerSquareMeter));
             unitConverter.SetConversionFunction<Irradiation>(IrradiationUnit.WattHourPerSquareMeter, Irradiation.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<IrradiationDose>(IrradiationDose.BaseUnit, IrradiationDose.BaseUnit, q => q);
+            unitConverter.SetConversionFunction<IrradiationDose>(IrradiationDose.BaseUnit, IrradiationDoseUnit.Milligray, q => q.ToUnit(IrradiationDoseUnit.Milligray));
+            unitConverter.SetConversionFunction<IrradiationDose>(IrradiationDoseUnit.Milligray, IrradiationDose.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<KinematicViscosity>(KinematicViscosity.BaseUnit, KinematicViscosityUnit.Centistokes, q => q.ToUnit(KinematicViscosityUnit.Centistokes));
             unitConverter.SetConversionFunction<KinematicViscosity>(KinematicViscosityUnit.Centistokes, KinematicViscosity.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<KinematicViscosity>(KinematicViscosity.BaseUnit, KinematicViscosityUnit.Decistokes, q => q.ToUnit(KinematicViscosityUnit.Decistokes));
