@@ -13,5 +13,21 @@ steps:
 - task: PowerShell@2
   inputs:
     filePath: './Build/build.ps1'
+  
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: 'Artifacts\NuGet\UnitsNet.*.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'c38893ab-a5c1-49f6-9ed7-af60abdc9e00'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: 'Artifacts\NuGet\UnitsNet.Serialization.JsonNet.*.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'c38893ab-a5c1-49f6-9ed7-af60abdc9e00'    
+
+    
 
 
