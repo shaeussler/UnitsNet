@@ -1,0 +1,25 @@
+﻿{
+  "Name": "IrradiationDose",
+  "BaseUnit": "Gray",
+  "XmlDoc": "Irradiation is the process by which an object is exposed to radiation. The exposure can originate from various sources, including natural sources.",
+  "XmlDocRemarks": "https://en.wikipedia.org/wiki/Gray_(unit)",
+  "BaseDimensions": {
+    "L": 2,
+    "T": -2
+  },
+  "Units": [
+    {
+      "SingularName": "Gray",
+      "PluralName": "Gray",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Prefixes": [ "Milli" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "Gy" ]
+        }
+      ]
+    }
+  ]
+}
